@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block  content %}
+
+    <div id="showcase">
+        <div class="container">
+            <h1>Best Memes</h1>
+        </div>
+    </div>
+
+    <div id="memes">
+        <div class="container">
+            <h1>subscribe To My Memes</h1>
+            <form>
+                <input type="email" placeholder="Enter Email...">
+                <button type="submit" class=button_1>Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    {% include "meme_menu.html" %}
+
+{% endblock %}
