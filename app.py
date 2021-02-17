@@ -1,11 +1,16 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, session
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
+
+
 
 
 @app.route('/')
 def index():
     return render_template("index.html")
+
 
 @app.route("/memes")
 def memes():
@@ -26,6 +31,7 @@ def WorldWar():
 @app.route("/Communist")
 def Communist():
     return render_template('Communist.html')
+
 
 @app.errorhandler(404)
 def handler404(_):
